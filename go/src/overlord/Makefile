@@ -26,8 +26,8 @@ deps:
 overlordd: deps
 	(cd $(BINDIR) && GOPATH=$(GOPATH) $(GO) build $(LDFLAGS) \
 		$(OVERLORD)/cmd/$@)
-	rm -rf $(FACTORY)/go/bin/app
-	ln -s $(CURDIR)/app $(FACTORY)/go/bin
+	rm -rf $(BINDIR)/app
+	ln -s $(CURDIR)/app $(BINDIR)
 
 ghost: deps
 	(cd $(BINDIR) && GOPATH=$(GOPATH) $(GO) build $(LDFLAGS) \
